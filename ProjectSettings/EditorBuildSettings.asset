@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/MainPackage/Scenes/LeveL_01.unity
+  - enabled: 0
+    path: Assets/MainPackage/Scenes/Level_01.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/MainPackage/Scenes/NewGame.unity
+    guid: d68cc7d814057493d8b87b94f597c9df
+  - enabled: 1
+    path: Assets/MainPackage/Scenes/Game Over  Screen.unity
+    guid: 4213a265778bd44848b4bbfeb57c3910
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9d29061d32c65fd4c811c90dcbaabaf6,
       type: 2}
