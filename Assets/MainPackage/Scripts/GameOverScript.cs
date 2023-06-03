@@ -1,33 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 
 public class GameOverScript : MonoBehaviour
 {
-    public Button Retrybtn;
-    public Button Quitbtn;
-    public GameObject GameOverScreen;
-    // Start is called before the first frame update
-    void Start()
+    public Button RetryBtn;
+    public Button QuitBtn;
+
+    private void Awake()
     {
-        // Retrybtn.onClick.AddListener(RestartGame);
-        
-        GameOverScreen.SetActive(false);
+        // Attach button click listeners
+        RetryBtn.onClick.AddListener(RetryGame);
+        QuitBtn.onClick.AddListener(QuitGame);
     }
 
-    // public void RestartGame(){
-    //     SceneManager.LoadScene(Level0);
-    // }
-
-    public void ShowGameOverScreen(){
-        GameOverScreen.SetActive(true);
+    private void RetryGame()
+    {
+        // Switch to the Level0 scene to restart the game
+        SceneManager.LoadScene("Level0");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void QuitGame()
     {
-        
+        // Quit the application
+        Application.Quit();
     }
 }
+
